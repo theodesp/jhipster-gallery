@@ -1,0 +1,41 @@
+{
+  "name": "Album",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "created",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "album",
+      "relationshipName": "user",
+      "otherEntityField": "login"
+    }
+  ],
+  "changelogDate": "20200615153017",
+  "entityTableName": "album",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
